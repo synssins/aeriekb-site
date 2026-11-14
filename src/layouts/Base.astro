@@ -1,0 +1,40 @@
+---
+import "../styles/site.css";
+interface Props { title: string; description: string }
+const { title, description } = Astro.props;
+---
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>{title}</title>
+<meta name="description" content={description}>
+<meta name="color-scheme" content="light dark">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="canonical" href={new URL(Astro.url.pathname, Astro.site)}>
+<meta property="og:title" content={title}>
+<meta property="og:description" content={description}>
+<meta property="og:type" content="website">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Reenie+Beanie&family=Nanum+Pen+Script&display=swap" rel="stylesheet">
+</head>
+<body>
+<header class="top">
+  <a class="brand" href="/"><img src="/aerie-icon.svg" alt="" width="30" height="30"><b>Aerie</b></a>
+  <nav aria-label="Sections">
+    <a href="/#spaces">Spaces and roles</a><a href="/#security">Security</a><a href="/#install">Install</a><a href="/#roadmap">Roadmap</a>
+  </nav>
+  <a class="demo" href="https://demo.aeriekb.com">Live Demo</a>
+</header>
+<main><slot /></main>
+<footer class="foot">
+  <div class="wrap">
+    <span class="brand"><img src="/aerie-icon.svg" alt="" width="22" height="22"><b>Aerie</b></span>
+    <span>Self-hosted knowledge base for IT teams. In development.</span>
+    <a href="https://demo.aeriekb.com">Live Demo</a>
+  </div>
+</footer>
+</body>
+</html>

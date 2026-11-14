@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="Aerie">
+  <style>
+    .m { stroke: #1f5fbf; }
+  </style>
+  <g class="m" fill="none" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M13 50 L32 13 L51 50" stroke-width="6"/>
+    <path d="M18.5 40 Q30 29 43.8 36" stroke-width="4.5"/>
+  </g>
+</svg>

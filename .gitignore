@@ -1,0 +1,8 @@
+PRODUCT.md
+DESIGN.md
+.impeccable/
+AGENTS.md
+CLAUDE.md
+node_modules/
+dist/
+.astro/

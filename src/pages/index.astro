@@ -1,0 +1,135 @@
+---
+import Base from "../layouts/Base.astro";
+import Showcase from "../components/Showcase.astro";
+---
+<Base title="Aerie: a self-hosted knowledge base for IT teams"
+      description="Aerie gathers your IT team's fixes, runbooks and know-how into one knowledge base, filed by team, versioned and searchable, on a server you own.">
+
+<div class="hero">
+  <div class="head">
+    <h1>Everything your IT team knows, finally in one place.</h1>
+    <p>Fixes hide in old email threads, chat history, sticky notes and the heads of people who left years ago. Aerie gathers them into one knowledge base, filed by team, versioned and searchable, on a server you own.</p>
+  </div>
+  <Showcase />
+</div>
+
+<section class="sec" id="spaces" aria-labelledby="spaces-h">
+  <div class="wrap">
+    <div class="split">
+      <div>
+        <h2 id="spaces-h">Each team gets its own space</h2>
+        <p class="lede">Infrastructure, network, identity, security: every team files its runbooks in its own space, with its own folder tree. Other teams don't see that space until someone gives them a role in it.</p>
+        <p class="note">Roles go to people directly or to local groups. An Admin creates spaces and their Owners; Owners run the rest of their space's membership. Custom roles are in progress.</p>
+      </div>
+      <div class="panel">
+        <div class="ph">Roles in a space <span>per person or group</span></div>
+        <table class="roles">
+          <tr><th scope="row">Reader</th><td>Reads the pages in the space.</td></tr>
+          <tr><th scope="row">Contributor</th><td>Writes pages, and moves or deletes their own work.</td></tr>
+          <tr><th scope="row">Supervisor</th><td>Moves and deletes anyone's pages in the space.</td></tr>
+          <tr><th scope="row">Owner</th><td>Decides who else gets in, and at which role.</td></tr>
+        </table>
+      </div>
+    </div>
+
+    <dl class="rows">
+      <div><dt>A real editor</dt><dd>Code blocks, tables, images and attachments, the things runbooks are made of.</dd></div>
+      <div><dt>Every version kept</dt><dd>See what changed between any two versions, and restore an old one.</dd></div>
+      <div><dt>Drafts</dt><dd>Work on a page until it's right, then publish it.</dd></div>
+      <div><dt>Search that forgives typos</dt><dd>Find the spooler fix even when you type "spoolr".</dd></div>
+      <div><dt>Export</dt><dd>Pages to PDF or Word; tables to CSV or Excel.</dd></div>
+      <div><dt>Tags</dt><dd>Tag pages by server, app or topic, across folders.</dd></div>
+    </dl>
+  </div>
+</section>
+
+<section class="sec" id="security" aria-labelledby="security-h">
+  <div class="wrap split">
+    <div>
+      <h2 id="security-h">Locked down by default</h2>
+      <p class="lede">Runbooks hold server names, recovery steps and who to call. Aerie treats them that way, and you can check each control yourself.</p>
+    </div>
+    <div>
+      <ul class="mech">
+        <li><b>Sensitive spaces</b><span>Mark a space sensitive and it's closed to Admins too. An Admin who needs in uses emergency access, which is logged, and the space's Owners are told.</span></li>
+        <li><b>A tamper-evident audit log</b><span>Each entry is hash-chained to the one before it, so an edited or deleted entry breaks the chain. Ship the log to your SIEM.</span></li>
+        <li><b>Scoped API tokens</b><span>Tokens carry only the permissions you give them, and they expire.</span></li>
+        <li><b>Sign-in</b><span>Signing out ends every session for that account. One-time codes from an authenticator app are in progress.</span></li>
+      </ul>
+      <div class="panel audit">
+        <div class="ph">Audit log <span>sample entries</span></div>
+        <div class="wide">
+          <table class="mono">
+            <tr><td>2026-11-12 22:41</td><td>admin.pat</td><td>Emergency access: Security Operations</td><td>9f3c…e1a0</td></tr>
+            <tr><td>2026-11-12 22:41</td><td>system</td><td>Owners notified: Security Operations</td><td>2b77…09cd</td></tr>
+            <tr><td>2026-11-12 22:58</td><td>admin.pat</td><td>Viewed: Ransomware Playbook</td><td>c41e…7f52</td></tr>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="sec" id="install" aria-labelledby="install-h">
+  <div class="wrap split">
+    <div>
+      <h2 id="install-h">Runs on your server</h2>
+      <p class="lede">No cloud service sits behind Aerie. Your pages stay on hardware you control, and it's free to self-host.</p>
+      <p class="note">An install guide comes with the first release. Until then, the live demo runs the current build.</p>
+    </div>
+    <div class="hosts">
+      <div>
+        <h3>Windows Server</h3>
+        <ul><li>Runs under IIS</li><li>SQL Server database</li></ul>
+      </div>
+      <div>
+        <h3>Docker</h3>
+        <ul><li>One container image</li><li>A single SQLite file, or SQL Server</li></ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="sec" id="roadmap" aria-labelledby="roadmap-h">
+  <div class="wrap">
+    <h2 id="roadmap-h">Where it's headed</h2>
+    <p class="lede">Aerie is in development. Here's what works today, what's being built, and what's planned.</p>
+    <div class="road">
+      <div>
+        <h3>Works today</h3>
+        <ul>
+          <li>Team spaces with roles and local groups</li>
+          <li>Sensitive spaces and emergency access</li>
+          <li>Version history, drafts, recycle bin</li>
+          <li>Search, tags, PDF and Word export</li>
+          <li>Audit log with SIEM shipping</li>
+          <li>Plugins with their own screens and data</li>
+        </ul>
+      </div>
+      <div class="now">
+        <h3>In progress</h3>
+        <ul>
+          <li>One-time sign-in codes</li>
+          <li>Spaces visible to anyone you choose</li>
+          <li>Custom roles</li>
+        </ul>
+      </div>
+      <div>
+        <h3>Planned</h3>
+        <ul>
+          <li><b>AI import.</b> Drop in one Word document or a hundred, and get documentation pages built from them.</li>
+          <li><b>AI help keeping pages current:</b> document management, review of aging pages, and smarter search.</li>
+          <li><b>Application inventory.</b> Which applications and versions run on which servers, tracked next to the runbooks.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="close" aria-labelledby="close-h">
+  <h2 id="close-h">See it with real pages</h2>
+  <p>The demo has four IT team spaces and about 230 pages, running the current build.</p>
+  <a class="btn" href="https://demo.aeriekb.com">Live Demo</a>
+</section>
+
+</Base>
