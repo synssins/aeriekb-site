@@ -54,7 +54,7 @@ import Showcase from "../components/Showcase.astro";
         <li><b>Sensitive spaces</b><span>Mark a space sensitive and it's closed to Admins too. An Admin who needs in uses emergency access, which is logged, and the space's Owners are told.</span></li>
         <li><b>A tamper-evident audit log</b><span>Each entry is hash-chained to the one before it, so an edited or deleted entry breaks the chain. Ship the log to your SIEM.</span></li>
         <li><b>Scoped API tokens</b><span>Tokens carry only the permissions you give them, and they expire.</span></li>
-        <li><b>Tested from the attacker's side</b><span>Automated tests try actions under each role and check that the wrong ones are refused. The running app is also scanned with OWASP ZAP, and what the scans find gets fixed.</span></li>
+        <li><b>Built and tested to OWASP standards</b><span>Aerie is developed against the OWASP Top 10 and tested with OWASP methods. Automated tests try actions under every role and confirm the wrong ones are refused, and the running app is scanned for vulnerabilities, with findings fixed before release.</span></li>
         <li><b>Sign-in</b><span>Signing out ends every session for that account. One-time codes from an authenticator app are in progress.</span></li>
       </ul>
       <div class="panel audit">
