@@ -114,4 +114,4 @@ table{font-variant-numeric:tabular-nums}
 .foot .wrap{display:flex;align-items:center;gap:18px;flex-wrap:wrap}
 .foot .brand{color:var(--ink)}
 .foot .brand b{font-size:15px}
-.foot a{margin-left:auto}
+.foot a:first-of-type{margin-left:auto}
