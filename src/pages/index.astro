@@ -19,7 +19,7 @@ import Showcase from "../components/Showcase.astro";
       <div>
         <h2 id="spaces-h">Each team gets its own space</h2>
         <p class="lede">Infrastructure, network, identity, security: every team files its runbooks in its own space, with its own folder tree. Other teams don't see that space until someone gives them a role in it.</p>
-        <p class="note">Roles go to people directly or to local groups. An Admin creates spaces and their Owners. Owners run the rest of their space's membership. Custom roles are in progress.</p>
+        <p class="note">Roles go to people directly or to local groups. An Admin creates spaces and their Owners. Owners run the rest of their space's membership. Admins can add custom roles, which every space can use.</p>
       </div>
       <div class="panel">
         <div class="ph">Roles in a space <span>per person or group</span></div>
@@ -55,7 +55,7 @@ import Showcase from "../components/Showcase.astro";
         <li><b>A tamper-evident audit log</b><span>Each entry is hash-chained to the one before it, so an edited or deleted entry breaks the chain. Ship the log to your SIEM.</span></li>
         <li><b>Scoped API tokens</b><span>Tokens carry only the permissions you give them, and they expire.</span></li>
         <li><b>Built and tested to OWASP standards</b><span>Aerie is developed against the OWASP Top 10 and tested with OWASP methods. Automated tests try actions under every role and confirm the wrong ones are refused, and the running app is scanned for vulnerabilities, with findings fixed before release.</span></li>
-        <li><b>Sign-in</b><span>Signing out ends every session for that account. One-time codes from an authenticator app are in progress.</span></li>
+        <li><b>Sign-in</b><span>One-time codes from an authenticator app at sign-in. Signing out ends every session for that account.</span></li>
       </ul>
       <div class="panel audit">
         <div class="ph">Audit log <span>sample entries</span></div>
@@ -99,28 +99,33 @@ import Showcase from "../components/Showcase.astro";
       <div>
         <h3>Works today</h3>
         <ul>
-          <li>Team spaces with roles and local groups</li>
+          <li>Team spaces with roles, custom roles and local groups</li>
+          <li>Spaces private, open to signed-in users, or open to anyone</li>
           <li>Sensitive spaces and emergency access</li>
+          <li>One-time sign-in codes</li>
           <li>Version history, drafts, recycle bin</li>
-          <li>Search, tags, PDF and Word export</li>
-          <li>Audit log with SIEM shipping</li>
+          <li>Search, clickable tags, PDF and Word export</li>
+          <li>Audit log with filters, API token use and SIEM shipping</li>
+          <li><b>AI import:</b> drop in files, review each draft page before it's saved</li>
+          <li><b>AI format and assist</b> in the editor</li>
+          <li><b>Application inventory:</b> apps and versions per server, linked to pages</li>
+          <li>Theme colors for Day and Night, set by an Admin</li>
           <li>Plugins with their own screens and data</li>
         </ul>
       </div>
       <div class="now">
         <h3>In progress</h3>
         <ul>
-          <li>One-time sign-in codes</li>
-          <li>Spaces visible to anyone you choose</li>
-          <li>Custom roles</li>
+          <li>The first release, with an install guide</li>
         </ul>
       </div>
       <div>
         <h3>Planned</h3>
         <ul>
-          <li><b>AI import.</b> Drop in one Word document or a hundred, and get documentation pages built from them.</li>
-          <li><b>AI help keeping pages current:</b> document management, review of aging pages, and smarter search.</li>
-          <li><b>Application inventory.</b> Which applications and versions run on which servers, tracked next to the runbooks.</li>
+          <li><b>Page comments,</b> moderated by the space's Supervisors and Owners.</li>
+          <li><b>Page ratings,</b> including a "This solved my problem" button.</li>
+          <li><b>Smarter search</b> with AI.</li>
+          <li><b>Azure Blob</b> for file storage.</li>
         </ul>
       </div>
     </div>
@@ -129,7 +134,7 @@ import Showcase from "../components/Showcase.astro";
 
 <section class="close" aria-labelledby="close-h">
   <h2 id="close-h">See it with real pages</h2>
-  <p>The demo has four IT team spaces and about 230 pages, running the current build.</p>
+  <p>The demo has four IT team spaces and about 290 pages, running the current build.</p>
   <a class="btn" href="https://demo.aeriekb.com">Live Demo</a>
 </section>
 
