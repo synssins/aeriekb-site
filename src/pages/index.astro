@@ -63,15 +63,15 @@ import Showcase from "../components/Showcase.astro";
   <div class="wrap split">
     <div>
       <h2 id="security-h">Locked down by default</h2>
-      <p class="lede">Runbooks hold server names, recovery steps and who to call. Aerie is designed to keep them in the right hands, and it's tested against attack as it's built.</p>
+      <p class="lede">Security and ease of use do not need to be mutually exclusive. Aerie keeps your runbooks in the right hands without getting in the way of the people who need them.</p>
     </div>
     <div>
       <ul class="mech">
-        <li><b>Sensitive spaces</b><span>Mark a space sensitive and it's closed to Admins too. An Admin who needs in uses emergency access, which is logged, and the space's Owners are told.</span></li>
-        <li><b>A tamper-evident audit log</b><span>Each entry is hash-chained to the one before it, so an edited or deleted entry breaks the chain. Ship the log to your SIEM.</span></li>
-        <li><b>Scoped API tokens</b><span>Tokens carry only the permissions you give them, and they expire.</span></li>
-        <li><b>OAuth 2.0 for applications</b><span>Connect other applications without sharing passwords. An Admin registers each one, each user approves it, and access can be cut off at any time.</span></li>
-        <li><b>Built and tested to OWASP standards</b><span>Aerie is developed against the OWASP Top 10 and tested with OWASP methods. Automated tests try actions under every role and confirm the wrong ones are refused, and the running app is scanned for vulnerabilities, with findings fixed before release.</span></li>
+        <li><b>Sensitive spaces</b><span>Mark a space sensitive and it's closed to Admins too. Access overrides are logged and send alert notifications to space owners.</span></li>
+        <li><b>A tamper-evident audit log</b><span>Each entry is hash-chained to the one before it, so an edited or deleted entry breaks the chain. Supports SIEM log shipping.</span></li>
+        <li><b>Scoped API tokens</b><span>Token permissions are scoped and can have expiration dates.</span></li>
+        <li><b>OAuth 2.0 for applications</b><span>Connect other applications without sharing passwords.</span></li>
+        <li><b>Actively penetration-tested</b><span>Builds are attacked with OWASP's open-source penetration-testing tools, under every role, and what they find is fixed before release.</span></li>
         <li><b>Sign-in</b><span>One-time codes from an authenticator app at sign-in. Signing out ends every session for that account.</span></li>
       </ul>
       <div class="panel audit">
@@ -99,11 +99,11 @@ import Showcase from "../components/Showcase.astro";
     <div class="hosts">
       <div>
         <h3>Windows Server</h3>
-        <ul><li>Runs under IIS</li><li>SQL Server database</li></ul>
+        <ul><li>Runs under IIS</li><li>SQL Server, or a single SQLite file</li></ul>
       </div>
       <div>
         <h3>Docker</h3>
-        <ul><li>One container image</li><li>A single SQLite file, or SQL Server</li></ul>
+        <ul><li>One container image</li><li>SQL Server, or a single SQLite file</li></ul>
       </div>
     </div>
   </div>
@@ -112,7 +112,6 @@ import Showcase from "../components/Showcase.astro";
 <section class="sec" id="features" aria-labelledby="features-h">
   <div class="wrap">
     <h2 id="features-h">Feature set</h2>
-    <p class="lede">Everything below is in the current build, and you can try all of it in the live demo. What comes next is on the <a href="https://github.com/synssins/aerie/blob/main/ROADMAP.md">roadmap</a>.</p>
     <div class="panel feat">
       <table class="roles">
         <tr><th scope="row">Knowledge</th><td>Team spaces with folder trees. Editor with code blocks, tables, images and attachments. Drafts, full version history with compare and restore, and a recycle bin.</td></tr>
@@ -123,7 +122,7 @@ import Showcase from "../components/Showcase.astro";
         <tr><th scope="row">AI</th><td>One assistant that imports your existing documents, builds pages from notes and screenshots, and cleans up pages that need work, on the model you choose.</td></tr>
         <tr><th scope="row">Compatibility</th><td>Maximum compatibility with existing commercial solutions, for a drop-in replacement with minimal effort. REST API, with OAuth 2.0 for connected applications.</td></tr>
         <tr><th scope="row">Extending</th><td>Plugins bring their own screens and data. Theme colors for Day and Night, set by an Admin.</td></tr>
-        <tr><th scope="row">Deployment</th><td>Windows Server with IIS and SQL Server, or one Docker image with SQLite or SQL Server. Free to self-host.</td></tr>
+        <tr><th scope="row">Deployment</th><td>Windows Server with IIS, or one Docker image. SQL Server or a single SQLite file on either. Free to self-host.</td></tr>
       </table>
     </div>
   </div>
