@@ -93,14 +93,9 @@ table{font-variant-numeric:tabular-nums}
 .hosts li{padding:2px 0}
 @media (max-width:640px){.hosts{grid-template-columns:1fr}.hosts>div+div{border-left:0;border-top:1px solid var(--line)}}
 
-/* roadmap */
-.road{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:48px;margin-top:48px}
-.road h3{font-size:15px;font-weight:600;margin:0 0 12px;padding-bottom:10px;border-bottom:2px solid var(--line)}
-.road .now h3{border-color:var(--accent);color:var(--accent)}
-.road ul{list-style:none;margin:0;padding:0}
-.road li{padding:7px 0;color:var(--ink2);font-size:15px}
-.road li b{color:var(--ink);font-weight:600}
-@media (max-width:900px){.road{grid-template-columns:1fr;gap:36px}}
+/* feature set */
+.feat{margin-top:48px}
+@media (max-width:560px){.feat th,.feat td{display:block;width:auto}.feat th{border-bottom:0;padding-bottom:0}}
 
 /* closing */
 .close{background:var(--nav);color:#e9eef5;text-align:center;padding:80px 24px}

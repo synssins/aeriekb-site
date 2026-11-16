@@ -17,9 +17,9 @@ import Showcase from "../components/Showcase.astro";
   <div class="wrap">
     <div class="split">
       <div>
-        <h2 id="spaces-h">Each team gets its own space</h2>
-        <p class="lede">Infrastructure, network, identity, security: every team files its runbooks in its own space, with its own folder tree. Other teams don't see that space until someone gives them a role in it.</p>
-        <p class="note">Roles go to people directly or to local groups. An Admin creates spaces and their Owners. Owners run the rest of their space's membership. Admins can add custom roles, which every space can use.</p>
+        <h2 id="spaces-h">A secure space for every team</h2>
+        <p class="lede">Each team keeps its knowledge in a space of its own: private by default, shared when you decide. Open a space to another team, to everyone who signs in, or to the public.</p>
+        <p class="note">The team's lead owns the space and decides who gets in. Supervisors keep its content in order, Contributors write, and Readers read. Need something in between? Add a custom role.</p>
       </div>
       <div class="panel">
         <div class="ph">Roles in a space <span>per person or group</span></div>
@@ -33,14 +33,29 @@ import Showcase from "../components/Showcase.astro";
     </div>
 
     <dl class="rows">
-      <div><dt>The editor</dt><dd>Code blocks, tables, images and attachments.</dd></div>
+      <div><dt>Curated knowledge</dt><dd>Every page can name its owner and the systems it applies to, so readers know who stands behind it.</dd></div>
+      <div><dt>Automatic ageing</dt><dd>Set a review cycle per space. Each page shows the date it is next due, so old runbooks don't go unnoticed.</dd></div>
       <div><dt>Every version kept</dt><dd>See what changed between any two versions, and restore an old one.</dd></div>
-      <div><dt>Drafts</dt><dd>Work on a page until it's right, then publish it.</dd></div>
+      <div><dt>A capable editor</dt><dd>Code blocks, tables, images and attachments, with drafts until a page is ready.</dd></div>
       <div><dt>Search that forgives typos</dt><dd>Find the spooler fix even when you type "spoolr".</dd></div>
-      <div><dt>Export</dt><dd>Pages to PDF or Word, tables to CSV or Excel.</dd></div>
-      <div><dt>Tags</dt><dd>Tag pages by server, app or topic, across folders.</dd></div>
-      <div style="grid-column:1/-1"><dt>Works with existing integrations</dt><dd>A Data Center compatible REST API, so scripts and tools written for it keep working when pointed at Aerie.</dd></div>
+      <div><dt>Tags and export</dt><dd>Tag pages by server, app or topic. Export to PDF, Word, CSV or Excel.</dd></div>
     </dl>
+  </div>
+</section>
+
+<section class="sec" id="ai" aria-labelledby="ai-h">
+  <div class="wrap split">
+    <div>
+      <h2 id="ai-h">AI that works under your rules</h2>
+      <p class="lede">Connect Aerie to the model you choose, including one on your own network. Each AI feature stays off until an Admin turns it on, and nothing is saved until a person approves it.</p>
+    </div>
+    <div>
+      <ul class="mech">
+        <li><b>AI import</b><span>Drop in the documents you already have and get draft pages back. You review each one before it's saved.</span></li>
+        <li><b>AI format</b><span>One click puts a rough page into a clean, consistent layout without changing what it says.</span></li>
+        <li><b>AI assist</b><span>Paste notes, screenshots or files into the editor. Aerie builds the page from them, or merges them into the page you're working on.</span></li>
+      </ul>
+    </div>
   </div>
 </section>
 
@@ -48,14 +63,14 @@ import Showcase from "../components/Showcase.astro";
   <div class="wrap split">
     <div>
       <h2 id="security-h">Locked down by default</h2>
-      <p class="lede">Runbooks hold server names, recovery steps and who to call. Aerie was designed around keeping them in the right hands, and it's tested against attack as it's built.</p>
+      <p class="lede">Runbooks hold server names, recovery steps and who to call. Aerie is designed to keep them in the right hands, and it's tested against attack as it's built.</p>
     </div>
     <div>
       <ul class="mech">
         <li><b>Sensitive spaces</b><span>Mark a space sensitive and it's closed to Admins too. An Admin who needs in uses emergency access, which is logged, and the space's Owners are told.</span></li>
         <li><b>A tamper-evident audit log</b><span>Each entry is hash-chained to the one before it, so an edited or deleted entry breaks the chain. Ship the log to your SIEM.</span></li>
         <li><b>Scoped API tokens</b><span>Tokens carry only the permissions you give them, and they expire.</span></li>
-        <li><b>OAuth 2.0 for applications</b><span>An Admin registers each application, and each user approves it on a consent screen and can cut it off again. Refresh tokens rotate, and a stolen one that is replayed revokes the rest.</span></li>
+        <li><b>OAuth 2.0 for applications</b><span>Connect other applications without sharing passwords. An Admin registers each one, each user approves it, and access can be cut off at any time.</span></li>
         <li><b>Built and tested to OWASP standards</b><span>Aerie is developed against the OWASP Top 10 and tested with OWASP methods. Automated tests try actions under every role and confirm the wrong ones are refused, and the running app is scanned for vulnerabilities, with findings fixed before release.</span></li>
         <li><b>Sign-in</b><span>One-time codes from an authenticator app at sign-in. Signing out ends every session for that account.</span></li>
       </ul>
@@ -78,6 +93,7 @@ import Showcase from "../components/Showcase.astro";
     <div>
       <h2 id="install-h">Runs on your server</h2>
       <p class="lede">No cloud service sits behind Aerie. Your pages stay on hardware you control, and it's free to self-host.</p>
+      <p class="note">Already running a commercial knowledge base? Aerie is built for maximum compatibility with existing commercial solutions, so it can drop in as a replacement with minimal effort. Your scripts and integrations keep working.</p>
       <p class="note">An install guide comes with the first release. Until then, the live demo runs the current build.</p>
     </div>
     <div class="hosts">
@@ -93,53 +109,29 @@ import Showcase from "../components/Showcase.astro";
   </div>
 </section>
 
-<section class="sec" id="roadmap" aria-labelledby="roadmap-h">
+<section class="sec" id="features" aria-labelledby="features-h">
   <div class="wrap">
-    <h2 id="roadmap-h">Where it's headed</h2>
-    <p class="lede">Aerie is in development. Here's what works today, what's being built, and what's planned.</p>
-    <div class="road">
-      <div>
-        <h3>Works today</h3>
-        <ul>
-          <li>Team spaces with roles, custom roles and local groups</li>
-          <li>Spaces private, open to signed-in users, or open to anyone</li>
-          <li>Sensitive spaces and emergency access</li>
-          <li>One-time sign-in codes</li>
-          <li>Version history, drafts, recycle bin</li>
-          <li>Search, clickable tags, PDF and Word export</li>
-          <li>Audit log with filters, API token use and SIEM shipping</li>
-          <li><b>Data Center compatible REST API:</b> pages, attachments, labels, spaces, users and CQL search</li>
-          <li><b>OAuth 2.0</b> with PKCE, plus Basic and personal access tokens, for API clients</li>
-          <li><b>AI import:</b> drop in files, review each draft page before it's saved</li>
-          <li><b>AI format and assist</b> in the editor</li>
-          <li><b>Application inventory:</b> apps and versions per server, linked to pages</li>
-          <li>Theme colors for Day and Night, set by an Admin</li>
-          <li>Plugins with their own screens and data</li>
-        </ul>
-      </div>
-      <div class="now">
-        <h3>In progress</h3>
-        <ul>
-          <li>The first release, with an install guide</li>
-        </ul>
-      </div>
-      <div>
-        <h3>Planned</h3>
-        <ul>
-          <li><b>Page comments,</b> moderated by the space's Supervisors and Owners.</li>
-          <li><b>Page ratings,</b> including a "This solved my problem" button.</li>
-          <li><b>Smarter search</b> with AI.</li>
-          <li><b>Azure Blob</b> for file storage.</li>
-          <li><b>Cloud compatible APIs,</b> after the Data Center one.</li>
-        </ul>
-      </div>
+    <h2 id="features-h">Feature set</h2>
+    <p class="lede">Everything below is in the current build, and you can try all of it in the live demo.</p>
+    <div class="panel feat">
+      <table class="roles">
+        <tr><th scope="row">Knowledge</th><td>Team spaces with folder trees. Editor with code blocks, tables, images and attachments. Drafts, full version history with compare and restore, and a recycle bin.</td></tr>
+        <tr><th scope="row">Curation</th><td>Page owners, review cycles with due dates, and tags. An application inventory links each app and version to its servers and its pages.</td></tr>
+        <tr><th scope="row">Finding and sharing</th><td>Search that forgives typos. Export pages to PDF or Word, and tables to CSV or Excel.</td></tr>
+        <tr><th scope="row">Access</th><td>Four roles per space plus your own custom roles, for people or groups. Spaces can be private, open to signed-in users, or public.</td></tr>
+        <tr><th scope="row">Security</th><td>Sensitive spaces with logged emergency access. Sign-in codes. A hash-chained audit log that ships to your SIEM. Scoped, expiring API tokens.</td></tr>
+        <tr><th scope="row">AI</th><td>Import, format and assist, on the model you choose. An Admin controls each feature, and a person approves every result.</td></tr>
+        <tr><th scope="row">Compatibility</th><td>Maximum compatibility with existing commercial solutions, for a drop-in replacement with minimal effort. REST API, with OAuth 2.0 for connected applications.</td></tr>
+        <tr><th scope="row">Extending</th><td>Plugins bring their own screens and data. Theme colors for Day and Night, set by an Admin.</td></tr>
+        <tr><th scope="row">Deployment</th><td>Windows Server with IIS and SQL Server, or one Docker image with SQLite or SQL Server. Free to self-host.</td></tr>
+      </table>
     </div>
   </div>
 </section>
 
 <section class="close" aria-labelledby="close-h">
-  <h2 id="close-h">See it with real pages</h2>
-  <p>The demo has four IT team spaces and about 290 pages, running the current build.</p>
+  <h2 id="close-h">See it for yourself</h2>
+  <p>Check out the live demo. Sign in, look around and try it on real pages.</p>
   <a class="btn" href="https://demo.aeriekb.com">Live Demo</a>
 </section>
 
