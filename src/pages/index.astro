@@ -39,6 +39,7 @@ import Showcase from "../components/Showcase.astro";
       <div><dt>Search that forgives typos</dt><dd>Find the spooler fix even when you type "spoolr".</dd></div>
       <div><dt>Export</dt><dd>Pages to PDF or Word, tables to CSV or Excel.</dd></div>
       <div><dt>Tags</dt><dd>Tag pages by server, app or topic, across folders.</dd></div>
+      <div style="grid-column:1/-1"><dt>Works with existing integrations</dt><dd>A Data Center compatible REST API, so scripts and tools written for it keep working when pointed at Aerie.</dd></div>
     </dl>
   </div>
 </section>
@@ -54,6 +55,7 @@ import Showcase from "../components/Showcase.astro";
         <li><b>Sensitive spaces</b><span>Mark a space sensitive and it's closed to Admins too. An Admin who needs in uses emergency access, which is logged, and the space's Owners are told.</span></li>
         <li><b>A tamper-evident audit log</b><span>Each entry is hash-chained to the one before it, so an edited or deleted entry breaks the chain. Ship the log to your SIEM.</span></li>
         <li><b>Scoped API tokens</b><span>Tokens carry only the permissions you give them, and they expire.</span></li>
+        <li><b>OAuth 2.0 for applications</b><span>An Admin registers each application, and each user approves it on a consent screen and can cut it off again. Refresh tokens rotate, and a stolen one that is replayed revokes the rest.</span></li>
         <li><b>Built and tested to OWASP standards</b><span>Aerie is developed against the OWASP Top 10 and tested with OWASP methods. Automated tests try actions under every role and confirm the wrong ones are refused, and the running app is scanned for vulnerabilities, with findings fixed before release.</span></li>
         <li><b>Sign-in</b><span>One-time codes from an authenticator app at sign-in. Signing out ends every session for that account.</span></li>
       </ul>
@@ -106,6 +108,8 @@ import Showcase from "../components/Showcase.astro";
           <li>Version history, drafts, recycle bin</li>
           <li>Search, clickable tags, PDF and Word export</li>
           <li>Audit log with filters, API token use and SIEM shipping</li>
+          <li><b>Data Center compatible REST API:</b> pages, attachments, labels, spaces, users and CQL search</li>
+          <li><b>OAuth 2.0</b> with PKCE, plus Basic and personal access tokens, for API clients</li>
           <li><b>AI import:</b> drop in files, review each draft page before it's saved</li>
           <li><b>AI format and assist</b> in the editor</li>
           <li><b>Application inventory:</b> apps and versions per server, linked to pages</li>
@@ -126,6 +130,7 @@ import Showcase from "../components/Showcase.astro";
           <li><b>Page ratings,</b> including a "This solved my problem" button.</li>
           <li><b>Smarter search</b> with AI.</li>
           <li><b>Azure Blob</b> for file storage.</li>
+          <li><b>Cloud compatible APIs,</b> after the Data Center one.</li>
         </ul>
       </div>
     </div>
